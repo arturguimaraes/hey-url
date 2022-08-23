@@ -3,7 +3,7 @@
 # heyURL!
 
 <p>Generate short URLS and manage click counts.</p>
-<p>Coded with React, Typescript, and uses Firebase for API and Database.</p>
+<p>Built with ReactJS, Typescript, Saas modules and uses Firebase for API and Database.</p>
 <p>Exploring concepts of React Context, useState, useEffect, Component props and data handling</p>
 <p>Features: shortUrl duplicity check; validation for 5 chars; redirecting to original urls; clicks count; detail page of each url accessing '/url/your-short-url';</p>
 <p>How does the click count work: If you click on the link at home page, the system will redirect you for that page and count a click. Or you can acess '/your-short-url', then the system will count the click and redirect you anyway.</p>

@@ -4,7 +4,7 @@ import Body from "../ui/table/Body";
 import Header from "../ui/table/Header";
 import Table from "../ui/table/Table";
 
-const URL_TABLE_HEADERS = ["Redirect URL", "Short URL", "Clicks"];
+const URL_TABLE_HEADERS = ["Redirect URL", "Short URL", "Clicks", "View Data"];
 
 export default function UrlTable() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ export default function UrlTable() {
     if (isLoading) {
       urlsContext?.loadUrls(callbackUrlTable);
     }
-  }, [urlsContext?.urls]);
+  }, [isLoading, urlsContext]);
 
   if (isLoading) {
     return (

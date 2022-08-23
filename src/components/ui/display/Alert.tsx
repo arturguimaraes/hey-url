@@ -1,7 +1,7 @@
 export default function Alert(props: any) {
   return (
     <div
-      className={"alert alert-" + (props.class || "primary") + " alert-dismissible fade show"}
+      className={"alert alert-" + (props.class || "primary") + " alert-dismissible fade show text-center"}
       role="alert"
     >
       {props.text}
@@ -10,6 +10,7 @@ export default function Alert(props: any) {
         className="btn-close"
         data-bs-dismiss="alert"
         aria-label="Close"
+        onClick={props.onHideAlert}
       ></button>
     </div>
   );

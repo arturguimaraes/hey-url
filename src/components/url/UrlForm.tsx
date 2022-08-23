@@ -102,7 +102,7 @@ export default function UrlForm(props: any) {
           </div>
           <div className="col-md-12 mb-3">
             <label htmlFor="shortUrl" className="mb-2">
-              Short URL (max. 5 chars and only letters)
+              Short URL (max. 5 chars)
             </label>
             <input
               className="form-control"

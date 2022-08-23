@@ -1,20 +1,15 @@
 import { useContext, useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { IUrl } from "../@types/url";
+import UrlView from "../components/url/UrlView";
 import UrlsContext from "../context/urls-context";
 
-export default function Redirect() {
+export default function Url() {
   const urlsContext = useContext(UrlsContext);
-  const history = useHistory();
   const params = useParams<{ id: string }>();
   const [isLoading, setIsLoading] = useState(true);
   const [url, setUrl] = useState<IUrl | null>(null);
   const [notFound, setNotFound] = useState(false);
-
-  const openInNewTab = (url: string) => {
-    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
-    if (newWindow) newWindow.opener = null;
-  };
 
   function callbackRedirect(url: IUrl) {
     //console.log(url);
@@ -24,15 +19,6 @@ export default function Redirect() {
     }
     setUrl(url);
     setIsLoading(false);
-    urlsContext?.addClick(url, secondCallbackRedirect);
-  }
-
-  function secondCallbackRedirect(url: IUrl) {
-    console.log("Redirecting to:", url.redirectUrl);
-    setTimeout(() => {
-      openInNewTab(url.redirectUrl);
-      history.push("/url/" + url.shortUrl);
-    }, 3000);
   }
 
   useEffect(() => {
@@ -51,9 +37,11 @@ export default function Redirect() {
 
   return (
     <section>
-      <p className="text-center mb-4">
-        {url ? "Redirecting to " + url.redirectUrl + "..." : "Loading data..."}
-      </p>
+      {url ? (
+        <UrlView url={url} />
+      ) : (
+        <p className="text-center mb-4">Loading data...</p>
+      )}
     </section>
   );
 }

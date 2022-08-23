@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
-import Other from "./pages/Other";
+import Url from "./pages/Url";
 import Redirect from "./pages/Redirect";
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
           <Home />
         </Route>
         <Route path="/url/:id">
-          <Other />
+          <Url />
         </Route>
         <Route path="/:id">
           <Redirect />

@@ -23,7 +23,6 @@ export default function Navbar() {
           <div className="container">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <NavbarLink url="/" text="Home" />
-              <NavbarLink url="/other" text="Other" />
             </ul>
           </div>
         </div>

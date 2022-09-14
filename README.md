@@ -2,11 +2,15 @@
 
 ![heyURL](https://github.com/arturguimaraes/hey-url/blob/main/src/assets/img/cap1.PNG?raw=true)
 
+## Live Application
+
+Click [here](https://arturguimaraes.github.io/hey-url/) to go to the application.
+
 ## Installation
 
-1. `git clone repo`
-2. `cd hey-url
-3. `npm install
+1. `git clone https://github.com/arturguimaraes/hey-url.git`
+2. `cd hey-url`
+3. `npm i`
 4. `npm start`
 
 ## Introduction

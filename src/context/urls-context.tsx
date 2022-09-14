@@ -5,7 +5,6 @@ import {
   set,
   get,
   update,
-  remove,
   child,
   Database,
 } from "firebase/database";

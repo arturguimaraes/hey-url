@@ -12,7 +12,6 @@ export default function Url() {
   const [notFound, setNotFound] = useState(false);
 
   function callbackRedirect(url: IUrl) {
-    //console.log(url);
     if (url == null) {
       setNotFound(true);
       return;

@@ -7,14 +7,6 @@ import Alert from "../display/Alert";
 export default function Body(props: any) {
   const [hasAlert, setHasAlert] = useState(false);
 
-  function showAlertHandler() {
-    setHasAlert(true);
-  }
-
-  /* <span className="me-2" onClick={showAlertHandler}>
-      <i className="bi bi-clipboard-check"></i>
-  </span>*/
-
   function hideAlertHandler() {
     setHasAlert(false);
   }

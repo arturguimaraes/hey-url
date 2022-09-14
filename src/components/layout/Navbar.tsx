@@ -1,4 +1,5 @@
 import NavbarLink from "./NavbarLink";
+import logo from "../../assets/img/link.png";
 import classes from "./Navbar.module.scss";
 
 export default function Navbar() {
@@ -6,7 +7,7 @@ export default function Navbar() {
     <nav className={"navbar navbar-dark navbar-expand-lg " + classes.navbarRed}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          heyURL!
+          <img className={classes.logo} src={logo} alt="heyURL!" /> heyURL!
         </a>
         <button
           className="navbar-toggler"

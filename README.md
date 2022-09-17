@@ -8,10 +8,22 @@ Click [here](https://arturguimaraes.github.io/hey-url/) to go to the application
 
 ## Installation
 
-1. `git clone https://github.com/arturguimaraes/hey-url.git`
-2. `cd hey-url`
-3. `npm i`
-4. `npm start`
+1. `Clone repository`
+```js 
+git clone https://github.com/arturguimaraes/hey-url.git 
+```
+2. `Go to directory`
+```js 
+cd hey-url
+```
+3. `Install required libraries`
+```js 
+npm i
+```
+4. `Start project on http://localhost:3000/`
+```js 
+npm start
+```
 
 ## Introduction
 

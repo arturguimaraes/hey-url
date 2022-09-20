@@ -24,7 +24,7 @@ export default function Url() {
     if (isLoading) {
       urlsContext?.getUrl(params.id, callbackRedirect);
     }
-  }, [isLoading, urlsContext, url]);
+  }, [isLoading, urlsContext, url, params.id]);
 
   if (notFound) {
     return (

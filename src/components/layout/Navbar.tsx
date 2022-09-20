@@ -1,4 +1,5 @@
 import NavbarLink from "./NavbarLink";
+import { Link } from "react-router-dom";
 import logo from "../../assets/img/link.png";
 import classes from "./Navbar.module.scss";
 
@@ -6,9 +7,9 @@ export default function Navbar() {
   return (
     <nav className={"navbar navbar-dark navbar-expand-lg " + classes.navbarRed}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand">
           <img className={classes.logo} src={logo} alt="heyURL!" /> heyURL!
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

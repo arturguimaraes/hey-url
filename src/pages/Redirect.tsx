@@ -16,30 +16,30 @@ export default function Redirect() {
     if (newWindow) newWindow.opener = null;
   };
 
-  function callbackRedirect(url: IUrl) {
-    //console.log(url);
-    if (url == null) {
-      setNotFound(true);
-      return;
-    }
-    setUrl(url);
-    setIsLoading(false);
-    urlsContext?.addClick(url, secondCallbackRedirect);
-  }
-
-  function secondCallbackRedirect(url: IUrl) {
-    console.log("Redirecting to:", url.redirectUrl);
-    setTimeout(() => {
-      openInNewTab(url.redirectUrl);
-      history.push("/url/" + url.shortUrl);
-    }, 3000);
-  }
-
   useEffect(() => {
+    function callbackRedirect(url: IUrl) {
+      //console.log(url);
+      if (url == null) {
+        setNotFound(true);
+        return;
+      }
+      setUrl(url);
+      setIsLoading(false);
+      urlsContext?.addClick(url, secondCallbackRedirect);
+    }
+
+    function secondCallbackRedirect(url: IUrl) {
+      console.log("Redirecting to:", url.redirectUrl);
+      setTimeout(() => {
+        openInNewTab(url.redirectUrl);
+        history.push("/url/" + url.shortUrl);
+      }, 3000);
+    }
+
     if (isLoading) {
       urlsContext?.getUrl(params.id, callbackRedirect);
     }
-  }, [isLoading, urlsContext, url]);
+  }, [isLoading, urlsContext, url, params.id, history]);
 
   if (notFound) {
     return (

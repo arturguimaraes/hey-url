@@ -94,7 +94,9 @@ export default function UrlForm(props: any) {
               id="redirectUrl"
               name="redirectUrl"
               value={redirectUrl}
-              onChange={(event) => setRedirectUrl(event.target.value)}
+              onChange={(event) =>
+                setRedirectUrl(event.target.value.toLowerCase())
+              }
               ref={redirectUrlInputRef}
               placeholder="https://www.google.com.br"
               required
@@ -110,14 +112,16 @@ export default function UrlForm(props: any) {
               id="shortUrl"
               name="shortUrl"
               value={shortUrl}
-              onChange={(event) => setShortUrl(event.target.value)}
+              onChange={(event) =>
+                setShortUrl(event.target.value.toLowerCase())
+              }
               ref={shortUrlInputRef}
-              placeholder="https://www.google.com.br"
+              placeholder="googl"
               maxLength={5}
               required
             />
           </div>
-          <div className="col-md-12 mb-3">
+          <div className="col-md-12">
             <Button class="success">Generate URL</Button>
           </div>
         </Form>
